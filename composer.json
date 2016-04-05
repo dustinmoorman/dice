@@ -11,7 +11,8 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Dustinmoorman\\Dice\\": "Dice/"
+            "Dustinmoorman\\Dice\\": "src/Dice/",
+            "Tests\\Dice\\": "tests/Dice"
         }
     }
 }
