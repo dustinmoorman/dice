@@ -22,7 +22,7 @@ class RollerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException \InvalidArgumentException
      */
     public function testLoadRollerWith1X9Excepts()
     {
@@ -31,7 +31,7 @@ class RollerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException \InvalidArgumentException
      */
     public function testLoadRollerWithF1d5Excepts()
     {
@@ -40,7 +40,7 @@ class RollerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException InvalidArgumentException
+     * @expectedException \InvalidArgumentException
      */
     public function testLoadRollerWith1d53eExcepts()
     {
