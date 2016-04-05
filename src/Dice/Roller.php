@@ -44,7 +44,6 @@ class Roller
             throw new \InvalidArgumentException("Roll '{$rollText}' is invalid.");
         }
 
-        echo "Rolling {$this->_count} die, {$this->_sides} sides";
 
         $this->_rollText = $rollText;
     }
