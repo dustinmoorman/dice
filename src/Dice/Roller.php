@@ -5,8 +5,8 @@ namespace Dustinmoorman\Dice;
 class Roller
 {
     protected $_rollText;
-    protected $_rollCount;
-    protected $_Die;
+    protected $_count;
+    protected $_sides;
     protected $_results;
 
     /**
@@ -19,7 +19,7 @@ class Roller
             $this->loadRoll($rollText);
         }
 
-        $this->_results = array();
+        $this->_results = [];
     }
 
     /**
@@ -35,12 +35,16 @@ class Roller
     public function loadRoll($rollText)
     {
         if (preg_match('#^[0-9]*(d)[0-9]+$#', $rollText) === 1) { 
-            list($count, $sides) = explode("d", $rollText);
+            list($this->_count, $this->_sides) = explode("d", $rollText);
+
+            if (empty($this->_count)) {
+                $this->_count = 1;
+            }
         } else {
             throw new \InvalidArgumentException("Roll '{$rollText}' is invalid.");
         }
 
-        echo "Rolling {$count} die, {$sides} sides";
+        echo "Rolling {$this->_count} die, {$this->_sides} sides";
 
         $this->_rollText = $rollText;
     }
@@ -51,12 +55,24 @@ class Roller
      */
     public function roll()
     {
-        if (empty($this->_rollText)) {
-            throw new \Exception("No dice to roll.");
+        if (!is_numeric($this->_sides)) {
+            throw new Exception("Invalid number of sides, can't find a dice to roll!");
         }
 
-        echo "Roll: {$this->_rollText}\n";
-        
+        for ($i = 1; $i <= $this->_count; $i++) { 
+            $this->_results[] = $this->getDice()->roll();
+        }
+
         return $this->_results;
+    }
+
+
+    /**
+     * Gets a Die object for rolling.
+     * @return \Dustinmoorman\Dice\Die
+     */ 
+    protected function getDice()
+    {
+        return new Dice($this->_sides);
     }
 }
