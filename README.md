@@ -1,12 +1,12 @@
 Dice!
 =======
 
-usage:
+## usage:
 ```bash
 ./bin/roll 1d20
 ```
 
-running tests:
+## running tests:
 ```bash
 ./vendor/bin/phpunit tests/
 ```
