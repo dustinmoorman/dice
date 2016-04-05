@@ -1,5 +1,6 @@
 Dice!
 =======
+Simple dice application, allows you to roll n number of multi-sided die.
 
 ## usage:
 ```bash
