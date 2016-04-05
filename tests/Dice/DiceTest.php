@@ -12,9 +12,19 @@ class DiceTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('int', $result);
 
         //50 chances to go out of range
-        for ($i = 0; $i <= 50; $i++) {
+        for ($rolls = 0; $rolls <= 50; $rolls++) {
             $this->assertEquals(1, preg_match('#^[1-5]$#', $result));
         }
+    }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testSetSidesWithInvalidValueExcepts()
+    {
+        $dice = new \Dustinmoorman\Dice\Dice();
+        $dice->setSides('H');
+        $dice->roll();
     }
 
     /**
