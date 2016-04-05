@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?
+require "vendor/autoload.php";
+
+$argument = $argv[1];
+
+try {
+    $roller = new \Dustinmoorman\Dice\Roller($argument);
+    $results = $roller->roll();    
+
+    echo "[" . implode($results, ", ") . "]\n";
+
+} catch (Exception $e) {
+    echo "An error occurred while rolling! {$e->getMessage()}\n";
+} 
