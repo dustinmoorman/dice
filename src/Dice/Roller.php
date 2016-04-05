@@ -86,7 +86,7 @@ class Roller
             throw new \Exception("Invalid number of sides, can't find a dice to roll!");
         }
 
-        for ($i = 1; $i <= $this->_count; $i++) { 
+        for ($roll = 1; $roll <= $this->_count; $roll++) { 
             $this->_results[] = $this->getDice()->roll();
         }
 
