@@ -1,8 +1,8 @@
 #!/usr/bin/env php
-<?
-require "vendor/autoload.php";
+<?php
+require "../vendor/autoload.php";
 
-$argument = $argv[1];
+$argument = isset($argv[1]) ? $argv[1] : null;
 
 try {
     $roller = new \Dustinmoorman\Dice\Roller($argument);
