@@ -95,7 +95,7 @@ class Roller
 
 
     /**
-     * Gets a Die object for rolling.
+     * Gets a Dice object for rolling.
      * @return \Dustinmoorman\Dice\Dice
      */ 
     protected function getDice()
