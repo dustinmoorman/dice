@@ -6,7 +6,8 @@
     ],
     "homepage": "http://dustinmoorman.com/",
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "phpunit/phpunit": "5.0.*"
     },
     "minimum-stability": "dev",
     "autoload": {
