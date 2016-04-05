@@ -3,7 +3,7 @@
  * Dice
  * @author Dustin Moorman <dustinmoorman@gmail.com>
  *
- * Rolled by a dice roller. Roll returns a random number.
+ * Rolled by a dice roller. Dustinmoorman\Dice\Dice::roll() returns a random number.
  */
 
 namespace Dustinmoorman\Dice;
@@ -19,6 +19,7 @@ class Dice
 
     /**
      * Creates the die with sides, if provided.
+     * @param int | null $sides
      */
     public function __construct($sides = null)
     {
@@ -51,5 +52,4 @@ class Dice
 
         return mt_rand(1, $this->_sides);
     }
-
 }

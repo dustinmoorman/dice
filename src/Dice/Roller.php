@@ -56,6 +56,8 @@ class Roller
      *  1d6 - One six sided die.
      *  6d20 - Six twenty sided dice. 
      *  d40 - One fourty sided die.
+     * 
+     * @param string $rollText
      */
     public function loadRoll($rollText)
     {
@@ -69,13 +71,14 @@ class Roller
             throw new \InvalidArgumentException("Roll '{$rollText}' is invalid.");
         }
 
-
         $this->_rollText = $rollText;
     }
 
     /**
      * Roll creates the dice based on the roll text, and 
      * rolls it accordingly.
+     * 
+     * @return array
      */
     public function roll()
     {
@@ -93,7 +96,7 @@ class Roller
 
     /**
      * Gets a Die object for rolling.
-     * @return \Dustinmoorman\Dice\Die
+     * @return \Dustinmoorman\Dice\Dice
      */ 
     protected function getDice()
     {
