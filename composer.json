@@ -1,6 +1,7 @@
 {
     "name": "dustinmoorman/dice",
     "description": "A tool to roll random dice.",
+    "license": "MIT",
     "keywords": [
         "dustinmoorman dice diceroll roller roll die"
     ],
