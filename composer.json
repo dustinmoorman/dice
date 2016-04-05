@@ -1,0 +1,17 @@
+{
+    "name": "dustinmoorman/dice",
+    "description": "A tool to roll random dice.",
+    "keywords": [
+        "dustinmoorman dice diceroll roller roll die"
+    ],
+    "homepage": "http://dustinmoorman.com/",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Dice\\": "Dice/"
+        }
+    }
+}
