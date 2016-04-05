@@ -1,12 +1,37 @@
 <?php
+/**
+ * Dice Roller
+ * @author Dustin Moorman <dustinmoorman@gmail.com>
+ *
+ * Rolls the dice based on provided text.
+ */
 
 namespace Dustinmoorman\Dice;
 
 class Roller
 {
+    /**
+     * Input text, user's choice. Intended to be parsed into dice.
+     * @var string
+     */
     protected $_rollText;
+
+    /**
+     * Number of dice to roll.
+     * @var int
+     */
     protected $_count;
+
+    /**
+     * Number of sides to create die with.
+     * @var int
+     */
     protected $_sides;
+
+    /**
+     * Dice roll results.
+     * @var array
+     */
     protected $_results;
 
     /**
@@ -55,7 +80,7 @@ class Roller
     public function roll()
     {
         if (!is_numeric($this->_sides)) {
-            throw new Exception("Invalid number of sides, can't find a dice to roll!");
+            throw new \Exception("Invalid number of sides, can't find a dice to roll!");
         }
 
         for ($i = 1; $i <= $this->_count; $i++) { 
