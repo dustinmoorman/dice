@@ -8,7 +8,7 @@ bourbon:dice dustin$ ./bin/roll 10d35
 [6, 15, 19, 1, 12, 21, 23, 24, 29, 1]
 ```
 
-## running tests:
+## testing:
 ```bash
 bourbon:dice dustin$ ./vendor/bin/phpunit tests/
 ```
