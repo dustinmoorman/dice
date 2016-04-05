@@ -1,11 +1,13 @@
 Dice!
 =======
+Simple dice application, allows you to roll n number of multi-sided die.
 
-usage:
+## usage:
+```bash
+$ ./bin/roll 1d20
+```
 
-./bin/roll 1d20
-
-
-running tests:
-
-./vendor/bin/phpunit tests/
+## running tests:
+```bash
+$ ./vendor/bin/phpunit tests/
+```
