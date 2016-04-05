@@ -22,6 +22,10 @@ class Dice
      */
     public function roll()
     {
+        if (!is_numeric($this->_sides)) {
+            throw new \Exception("Sides not set, can't roll dice.");
+        }
+
         return mt_rand(1, $this->_sides);
     }
 }
