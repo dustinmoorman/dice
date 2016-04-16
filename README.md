@@ -1,5 +1,7 @@
 Dice!
 =======
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dustinmoorman/dice/master/LICENSE)
+
 Simple dice application, allows you to roll n number of multi-sided die.
 
 ## installation
